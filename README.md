@@ -1,19 +1,19 @@
 # Crowdfunding_ETL
 
 # Project 2
-Due Thursday by 23:59 Points 100 Submitting a text entry box or a website url
+## Due Thursday by 23:59 Points 100 Submitting a text entry box or a website url
 For the ETL mini project, you will work with a partner to practise building an ETL pipeline using Python, Pandas, and either Python dictionary methods or regular expressions to extract and transform the data. After you transform the data, you'll create four CSV files and use the CSV file data to create an ERD and a table schema. Finally, you’ll upload the CSV file data into a Postgres database.
 
 Since this is a one-week project, make sure that you have done at least half of your project before the third day of class to stay on track.
 
 Although you and your partner will divide the work, it’s essential to collaborate and communicate while working on different parts of the project. Be sure to check in with your partner regularly and offer support.
 
-Files
+# Files
 Download the starter code and files to help you get started:
 
 Project 2 ETL filesLinks to an external site.
 
-Before You Begin
+# Before You Begin
 Create a new repository, named Crowdfunding_ETL, for this project. Do not add this homework to an existing repository.
 
 Clone the new repository to your computer.
@@ -22,7 +22,7 @@ Rename the ETL_Mini_Project_Starter_Code.ipynb file with your first name initial
 
 Push the changes to GitHub
 
-Instructions
+# Instructions
 The instructions for this mini project are divided into the following subsections:
 
 Create the Category and Subcategory DataFrames
@@ -30,7 +30,8 @@ Create the Campaign DataFrame
 Create the Contacts DataFrame
 Create the Crowdfunding Database
 Create the Category and Subcategory DataFrames
-Extract and transform the crowdfunding.xlsx Excel data to create a category DataFrame that has the following columns:
+
+# Extract and transform the crowdfunding.xlsx Excel data to create a category DataFrame that has the following columns:
 
 A "category_id" column that has entries going sequentially from "cat1" to "catn", where n is the number of unique categories
 
@@ -52,7 +53,7 @@ The following image shows this subcategory DataFrame:
 subcategory DataFrame
 Export the subcategory DataFrame as subcategory.csv and save it to your GitHub repository.
 
-Create the Campaign DataFrame
+# Create the Campaign DataFrame
 Extract and transform the crowdfunding.xlsx Excel data to create a campaign DataFrame has the following columns:
 
 The "cf_id" column
@@ -88,7 +89,7 @@ The following image shows this campaign DataFrame:
 campaign DataFrame
 Export the campaign DataFrame as campaign.csv and save it to your GitHub repository.
 
-Create the Contacts DataFrame
+# Create the Contacts DataFrame
 Choose one of the following two options for extracting and transforming the data from the contacts.xlsx Excel data:
 
 Option 1: Use Python dictionary methods.
@@ -116,7 +117,8 @@ Clean and then export the DataFrame as contacts.csv and save it to your GitHub r
 Check that your final DataFrame resembles the one in the following image:
 
 final contact DataFrame
-Create the Crowdfunding Database
+
+# Create the Crowdfunding Database
 Inspect the four CSV files, and then sketch an ERD of the tables by using QuickDBDLinks to an external site..
 
 Use the information from the ERD to create a table schema for each CSV file.
@@ -135,7 +137,7 @@ Import each CSV file into its corresponding SQL table.
 
 Verify that each table has the correct data by running a SELECT statement for each.
 
-Hints
+# Hints
 To split each "category & sub-category" column value into "category" and "subcategory" column values, use df[["new_column1","new_column2"]] = df["column"].str.split(). Make sure to pass the correct parameters to the split() function.
 
 To get the unique category and subcategory values from the "category" and "subcategory" columns, create a NumPy array where the array length equals the number of unique categories and unique subcategories from each column. For information about how to do so, see numpy.arangeLinks to an external site. in the NumPy documentation.
@@ -150,5 +152,5 @@ To convert the "launch_date" and "end_date" UTC times to the datetime format, se
 
 For more information about how to add the "category_id" and "subcategory_id" unique identification numbers to the campaign DataFrame, see the pandas.DataFrame.mergeLinks to an external site. in the Pandas documentation.
 
-Support and Resources
+# Support and Resources
 Your instructional team will provide support during classes and office hours. You will also have access to learning assistants and tutors to help you with topics as needed. Make sure to take advantage of these resources as you collaborate with your partner on this project.
